@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title> Login </ion-title>
+    </ion-navbar>
+</ion-header>
+  
+<ion-content padding>
+  <h3> Entrar Com Sua Conta </h3> 
+  <p color = 'red' > {{this.newerror}} </p>
+  <div class="list">
+    <label class="item item-input">
+      <input type="text" placeholder="Login"  #login>
+    </label>
+    <label class="item item-input">
+      <input type= {{this.estado}} placeholder="insira a senha" #senha>
+    </label>
+      <button style = "width: 70px; height: 30px;" (click)="logIn(login.value, senha.value)" type="submit">
+        Logon
+      </button>
+    </div>
+    <button class="button button-small" (click)="mostraSenha();">Mostrar Senha</button>
+</ion-content>
