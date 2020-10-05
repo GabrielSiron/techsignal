@@ -6,22 +6,9 @@
         <ion-title>Tech Signal</ion-title>
     </ion-navbar>
 </ion-header>
-
-<ion-content  style="background-color: #ffffff;">
-    <div style="text-align: center;">
-        <h3 style='color: rgb(83, 42, 99);'>Bem Vindo ao Tech Signal</h3>
+<ion-content fullscreen="true" id='bg' style='background-image:url(./assets/imgs/inicio.png);background-repeat: no-repeat; margin-top: 35px;'>
+    <div>
+        <button outline block ion-button color="#FFFFFF" (click)="onLogin($event, item)" style="align-content:center; margin-top: 430px"> Entrar na sua conta </button>
     </div>
-    <p>
-        <ion-item style="text-align: center; background-color: #ffffff;">
-          <div>
-            <button ion-button color="dark" (click)="onLogin($event, item)" style="text-align: center; width: 200px"> Entrar na sua conta </button>
-          </div>
-          <div>  
-            <button ion-button color="dark" (click)="onCadastro($event, item)" style="width: 200px"> Inscreva-se Como Aluno</button>
-          </div>
-          <div>
-            <button ion-button color="dark" (click)="onCadastro($event, item)" style="width: 200px"> Inscreva-se Como Professor</button>
-          </div>
-        </ion-item>
-    </p>
+
 </ion-content>
