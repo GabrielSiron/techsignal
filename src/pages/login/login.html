@@ -1,25 +1,25 @@
-<ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
+<ion-content fullscreen="true" padding style='background-color: #DCFFFB;'>
+  <ion-img width =100 height = 150 style = "background-color: #DCFFFB;
+
+                                            height: 70vh;
+                                            width: auto;
+                                            margin: auto;
+                                            display: block;"
+                                            [src]="this.src">
+  </ion-img>
+  <ion-item style = "background-color: transparent; margin-top: 50px;">
+        <ion-label floating>E-mail</ion-label>
+        <ion-input #login></ion-input>
+    </ion-item>
+    <ion-item small style = "background-color: transparent;">
+        <ion-label floating>Senha</ion-label>
+        <ion-input style="witdh: 150px;" #senha></ion-input>
+        <ion-icon name="eye-off" style='margin-left: 185px;'></ion-icon>
+    </ion-item>
+    <ion-content style = "align-content: center; background-color: transparent;">
+      <button solid block ion-button style = " width: 250px;" (click)="logIn(login.value, senha.value)" type="submit">Entrar</button>
+      <button outline block ion-button style = "width: 250px;" (click)="logIn(value = 'cadastro')" type="submit">
+          Não tem uma conta? Clique Aqui!
       </button>
-      <ion-title> Login </ion-title>
-    </ion-navbar>
-</ion-header>
-  
-<ion-content padding>
-  <h3> Entrar Com Sua Conta </h3> 
-  <p color = 'red' > {{this.newerror}} </p>
-  <div class="list">
-    <label class="item item-input">
-      <input type="text" placeholder="Login"  #login>
-    </label>
-    <label class="item item-input">
-      <input type= {{this.estado}} placeholder="insira a senha" #senha>
-    </label>
-      <button style = "width: 70px; height: 30px;" (click)="logIn(login.value, senha.value)" type="submit">
-        Logon
-      </button>
-    </div>
-    <button class="button button-small" (click)="mostraSenha();">Mostrar Senha</button>
-</ion-content>
+      </ion-content>
+  </ion-content>

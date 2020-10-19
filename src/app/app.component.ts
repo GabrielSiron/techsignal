@@ -1,9 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform, MenuController, Nav } from 'ionic-angular';
-
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { MyClass } from '../pages/other/other';
+import { Inicio } from '../pages/inicio/inicio';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -15,8 +12,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
-  rootPage = HelloIonicPage;
-  pages: Array<{title: string, component: any}>;
+  rootPage = Inicio;
 
   constructor(
     public platform: Platform,
@@ -27,10 +23,7 @@ export class MyApp {
     this.initializeApp();
 
     // set our app's pages
-    this.pages = [
-      { title: 'Tech Signal', component: HelloIonicPage },
-      { title: 'Sobre Nós', component: MyClass}
-    ];
+
   }
 
   initializeApp() {

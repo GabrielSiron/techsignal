@@ -1,9 +1,9 @@
+import { Inicio } from './../pages/inicio/inicio';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+import { HomePage } from '../pages/home/home';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { MyClass } from '../pages/other/other';
@@ -15,12 +15,13 @@ import { Cadastro } from '../pages/cadastro/cadastro';
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
+    Inicio,
     ItemDetailsPage,
     ListPage,
     MyClass,
     Login,
-    Cadastro
+    Cadastro,
+    HomePage,
   ],
   imports: [
     BrowserModule,
@@ -29,12 +30,13 @@ import { Cadastro } from '../pages/cadastro/cadastro';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
+    Inicio,
     ItemDetailsPage,
     ListPage,
     MyClass,
     Login,
-    Cadastro
+    Cadastro,
+    HomePage,
   ],
   providers: [
     StatusBar,

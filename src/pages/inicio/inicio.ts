@@ -6,12 +6,14 @@ import { Cadastro } from '../cadastro/cadastro';
 import { Login } from '../login/login';
 
 @Component({
-  selector: 'hello-ionic',
-  templateUrl: 'hello-ionic.html'
+  selector: 'inicio',
+  templateUrl: 'inicio.html'
 })
 
-export class HelloIonicPage {
+export class Inicio {
+  src: string;
   constructor(public NavCtrl: NavController, public NavParams: NavParams) {
+    this.src = "../assets/imgs/novalogo.png";
   }
 
   onLogin(event, item) {
