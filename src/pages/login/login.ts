@@ -2,10 +2,12 @@ import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Cadastro} from '../cadastro/cadastro';
+import { from } from 'rxjs/observable/from';
+import { directive } from '@angular/core/src/render3/instructions';
 
 @Component({
   selector: 'other-page',
-  templateUrl: 'login.html'
+  templateUrl: 'login.html',
 })
 
 export class Login {
