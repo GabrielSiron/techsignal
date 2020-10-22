@@ -20,17 +20,17 @@ export class Login {
     this.estadobool = true;
     this.src = "../assets/imgs/novalogo.png";
   }
-      logIn(login = "", senha = "", value = "") {
-          if(value == "cadastro"){
-            this.navCtrl.push(Cadastro);
-          }
-          if(login == 'localhost' && senha == 'password'){
+      logIn(login, senha) {
+
+        console.log(login);
+          if(login == 'password'){
             this.navCtrl.push(HomePage);
-          } else {
-            this.navCtrl.push(Cadastro);
           }
     };
 
+      cad(){
+        this.navCtrl.push(Cadastro);
+      }
     mostraSenha(){
         if(this.estadobool){
           this.estado = "text";
