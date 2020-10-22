@@ -14,14 +14,15 @@ export class Login {
   estado: string;
   estadobool: boolean;
   src: string;
-
+  aux: string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.estado = "password";
     this.estadobool = true;
+    this.aux = 'a';
     this.src = "../assets/imgs/novalogo.png";
   }
       logIn(login, senha) {
-
+        this.aux = login;
         console.log(login);
           if(login == 'password'){
             this.navCtrl.push(HomePage);

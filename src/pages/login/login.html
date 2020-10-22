@@ -17,7 +17,7 @@
         <ion-icon name="eye-off" style='margin-left: 185px;'></ion-icon>
     </ion-item>
     <ion-content style = "align-content: center; background-color: transparent;">
-      <button solid block ion-button style = " width: 250px;" (click)="logIn(login.value, senha.value)" type="submit">Entrar</button>
+      <button solid block ion-button style = " width: 250px;" (click)="logIn(login.value, senha.value)" type="submit">{{this.aux}}</button>
       <button outline block ion-button style = "width: 250px;" (click)="cad()" type="submit">
           Não tem uma conta? Clique Aqui!
       </button>
