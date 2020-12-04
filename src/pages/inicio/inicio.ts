@@ -2,28 +2,28 @@ import { Component } from '@angular/core';
 
 import { NavController, NavParams } from 'ionic-angular';
 
-import { Cadastro } from '../cadastro/cadastro';
-import { Login } from '../login/login';
+import { CadastroPage } from './../cadastro/cadastro';
+import { LoginPage } from './../login/login';
 
 @Component({
   selector: 'inicio',
   templateUrl: 'inicio.html'
 })
 
-export class Inicio {
+export class InicioPage {
   src: string;
   constructor(public NavCtrl: NavController, public NavParams: NavParams) {
     this.src = "../assets/imgs/novalogo.png";
   }
 
   onLogin(event, item) {
-    this.NavCtrl.push(Login, {
+    this.NavCtrl.push(LoginPage, {
     item: item}
     );
   }
 
   onCadastro(event, item) {
-    this.NavCtrl.push(Cadastro, {
+    this.NavCtrl.push(CadastroPage, {
     item: item }
     );
   }
