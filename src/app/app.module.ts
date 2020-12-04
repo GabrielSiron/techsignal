@@ -1,38 +1,48 @@
-import { InicioPage } from './../pages/inicio/inicio';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { LoginPage } from '../pages/login/login';
-import { CadastroPage } from '../pages/cadastro/cadastro';
+import { HomePage } from './../home/home';
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
+import { CadastroPage} from './../cadastro/cadastro';
+import { from } from 'rxjs/observable/from';
+import { directive } from '@angular/core/src/render3/instructions';
+import { FormBuilder, Validators } from '@angular/forms';
 
-@NgModule({
-  declarations: [
-    MyApp,
-    InicioPage,
-    LoginPage,
-    CadastroPage,
-    HomePage,
-  ],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp),
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    InicioPage,
-    LoginPage,
-    CadastroPage,
-    HomePage,
-  ],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+@Component({
+  selector: 'other-page',
+  templateUrl: 'login.html',
 })
-export class AppModule {}
+
+export class LoginPage {
+
+  login: string[];
+  estado: string;
+  estadobool: boolean;
+  src: string;
+  aux: string;
+  constructor(public formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams) {
+    this.estado = "password";
+    this.estadobool = true;
+    this.aux = 'a';
+    this.src = "../assets/imgs/novalogo.png";
+
+  }
+      logIn(login, senha) {
+        this.aux = login;
+        console.log(login);
+        this.navCtrl.push(HomePage);
+
+    };
+
+      cad(){
+        this.navCtrl.push(CadastroPage);
+      }
+    mostraSenha(){
+        if(this.estadobool){
+          this.estado = "text";
+          this.estadobool = false;
+        } else {
+          this.estado = "password";
+          this.estadobool = true;
+        }
+    };
+
+}

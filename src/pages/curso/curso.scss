@@ -1,0 +1,37 @@
+page-curso {
+  div.scrollmenu {
+    background-color: transparent;
+    overflow: auto;
+    white-space: nowrap;
+  }
+
+  ion-card.card {
+    color: black;
+    display: inline-block;
+    width: 70%;
+    height: 70%;
+    white-space: normal;
+    vertical-align: top;
+
+  }
+
+  ion-card.card ion-card-title {
+      white-space: normal;
+      height: 50px;
+  }
+
+  ion-card.card ion-card-content {
+    height: 100px;
+  }
+
+  img.card {
+    vertical-align: top;
+    width: 150px;
+    height: 150px;
+  }
+
+  div.scrollmenu h5 {
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+  }
+}

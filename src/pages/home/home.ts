@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CursoPage } from '../curso/curso';
 
 /**
  * Generated class for the HomePage page.
@@ -17,12 +18,18 @@ export class HomePage {
 
   nome: string;
   cargo: string;
+  videos: string[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
       this.nome = "LocalHost";
       this.cargo = "SuperAdmin";
+
+      this.videos = [""];
   }
 
+  cad(){
+    this.navCtrl.push(CursoPage);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');
