@@ -1,7 +1,7 @@
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Cadastro} from '../cadastro/cadastro';
+import { CadastroPage} from './../cadastro/cadastro';
 import { from } from 'rxjs/observable/from';
 import { directive } from '@angular/core/src/render3/instructions';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -11,7 +11,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: 'login.html',
 })
 
-export class Login {
+export class LoginPage {
 
   login: string[];
   estado: string;
@@ -33,7 +33,7 @@ export class Login {
     };
 
       cad(){
-        this.navCtrl.push(Cadastro);
+        this.navCtrl.push(CadastroPage);
       }
     mostraSenha(){
         if(this.estadobool){

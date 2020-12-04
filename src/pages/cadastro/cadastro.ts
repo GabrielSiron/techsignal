@@ -6,7 +6,7 @@ import { NavController, NavParams } from 'ionic-angular';
     templateUrl: 'cadastro.html'
   })
 
-  export class Cadastro {
+  export class CadastroPage {
     erro: string;
     estado: string;
     estadobool: boolean;
