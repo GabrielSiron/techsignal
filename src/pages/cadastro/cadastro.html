@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
     <ion-navbar>
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -32,4 +32,52 @@
       </button>
       </ion-item>
     </div>
-</ion-content>
+</ion-content> -->
+
+
+
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Cadastro</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <ion-grid no-padding>
+      <ion-row align-items-end justify-content-left>
+        <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+          <!-- <form #ngForm="ngForm" on-ngSubmit="toLogin(item)" novalidate text-center> -->
+            <img style="margin: auto; display: block; width: 120px; height: auto; padding-top: 5%;" src="../../assets/imgs/novalogo.png" id="logo" alt="Tech Signal" title="Tech Signal"><img>
+            <ion-list>
+              <ion-item class="animated slideInLeft faster">
+                <ion-label floating for="email">Nome</ion-label>
+                <ion-input></ion-input>
+              </ion-item>
+              <ion-item class="animated slideInLeft faster">
+                <!-- <ion-icon item-start name="lock-closed" color="danger"></ion-icon> -->
+                <ion-label floating for="email">E-mail</ion-label>
+                <ion-input #login></ion-input>
+              </ion-item>
+              <ion-item class="animated slideInLeft fast">
+                <ion-label floating for="password">Senha</ion-label>
+                <ion-input #senha1></ion-input>
+                <button color="light-primary" ion-button clear item-right tappable type="button">
+                <ion-icon color="light-primary"></ion-icon>
+                </button>
+              </ion-item>
+              <ion-item class="animated slideInLeft fast">
+                <ion-label floating for="password">Confirme sua senha</ion-label>
+                <ion-input #senha2></ion-input>
+                <button color="light-primary" ion-button clear item-right tappable type="button">
+                <ion-icon color="light-primary"></ion-icon>
+                </button>
+              </ion-item>
+            </ion-list>
+            <div padding>
+              <button tappable (click)="cadastro(login.value, senha1.value, senha2.value)" type="submit" block ion-button round>Cadastrar</button>
+            </div>
+          <!-- </form> -->
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
