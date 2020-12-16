@@ -17,6 +17,7 @@ export class HomePage {
 
   nome: string;
   cargo: string;
+  videos: string[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
       this.nome = "LocalHost";
@@ -24,6 +25,9 @@ export class HomePage {
       this.menuCtrl.enable(true); 
   }
 
+  cad(){
+    this.navCtrl.push(CursoPage);
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');

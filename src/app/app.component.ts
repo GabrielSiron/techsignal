@@ -1,8 +1,10 @@
+import { CursoPage } from './../pages/curso/curso';
 import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 import { InicioPage } from '../pages/inicio/inicio';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LoginPage } from '../pages/login/login';
 
 
 @Component({
@@ -12,6 +14,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   // make HelloIonicPage the root (or first) page
+  pages: Array<{title: string, component: any}>;
   rootPage = InicioPage;
 
   constructor(
@@ -23,7 +26,10 @@ export class MyApp {
     this.initializeApp();
 
     // set our app's pages
-
+    this.pages = [
+      { title: 'Tech Signal', component: CursoPage },
+      { title: 'Sobre Nós', component: LoginPage}
+    ];
   }
 
   initializeApp() {
