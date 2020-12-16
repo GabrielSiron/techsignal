@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 
 /**
  * Generated class for the HomePage page.
@@ -18,9 +18,10 @@ export class HomePage {
   nome: string;
   cargo: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
       this.nome = "LocalHost";
       this.cargo = "SuperAdmin";
+      this.menuCtrl.enable(true); 
   }
 
 

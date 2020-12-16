@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { MenuController, NavController, NavParams } from 'ionic-angular';
 
 import { CadastroPage } from './../cadastro/cadastro';
 import { LoginPage } from './../login/login';
@@ -12,8 +12,9 @@ import { LoginPage } from './../login/login';
 
 export class InicioPage {
   src: string;
-  constructor(public NavCtrl: NavController, public NavParams: NavParams) {
+  constructor(public menuCtrl: MenuController, public NavCtrl: NavController, public NavParams: NavParams) {
     this.src = "../assets/imgs/novalogo.png";
+    this.menuCtrl.enable(false); 
   }
 
   onLogin(event, item) {
