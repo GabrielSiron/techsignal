@@ -1,10 +1,7 @@
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { MenuController, NavController, NavParams } from 'ionic-angular';
 import { CadastroPage} from './../cadastro/cadastro';
-import { from } from 'rxjs/observable/from';
-import { directive } from '@angular/core/src/render3/instructions';
-import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'other-page',
@@ -18,12 +15,12 @@ export class LoginPage {
   estadobool: boolean;
   src: string;
   aux: string;
-  constructor(public formBuilder: FormBuilder, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
     this.estado = "password";
     this.estadobool = true;
     this.aux = 'a';
     this.src = "../assets/imgs/novalogo.png";
-
+    this.menuCtrl.enable(false);  
   }
       logIn(login, senha) {
         this.aux = login;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from 'ionic-angular';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
@@ -11,9 +12,11 @@ import { NavController, NavParams } from 'ionic-angular';
     estado: string;
     estadobool: boolean;
 
-    constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
         this.estado = "password";
         this.estadobool = true;
+        this.menuCtrl.enable(true); 
+        
     }
     
     cadastro(login, senha1, senha2){

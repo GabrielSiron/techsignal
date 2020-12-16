@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { CursoPage } from '../curso/curso';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 
 /**
  * Generated class for the HomePage page.
@@ -20,11 +19,10 @@ export class HomePage {
   cargo: string;
   videos: string[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
       this.nome = "LocalHost";
       this.cargo = "SuperAdmin";
-
-      this.videos = [""];
+      this.menuCtrl.enable(true); 
   }
 
   cad(){
