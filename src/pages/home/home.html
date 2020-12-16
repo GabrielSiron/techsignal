@@ -4,13 +4,17 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<style>
+    .icone {
+        display: inline-block;
+    }
+</style>
 <ion-content style="background-color: #DCFFFB;">
   <ion-header>
-    <ion-navbar>
-      <button ion-button menuToggle>
-        <ion-icon name="menu" style ="background-color: transparent;"></ion-icon>
+    <ion-navbar hideBackButton>
+      <button ion-button outline class="icone">
+        <ion-icon name="menu" md="md-menu"></ion-icon>
       </button>
-      <ion-title> Home </ion-title>
     </ion-navbar>
   </ion-header>
   <ion-label style= "margin-top: 100px;"> {{this.nome}} - {{this.cargo}} </ion-label>
