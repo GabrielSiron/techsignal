@@ -20,11 +20,17 @@ export class HomePage {
   nome: string;
   cargo: string;
   videos: string[];
+  canalVerde: any;
+  canalAzul: any;
+
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
       this.nome = "LocalHost";
       this.cargo = "SuperAdmin";
       this.menuCtrl.enable(true); 
+      this.canalVerde = 0;
+      this.canalAzul = 125;
   }
 
   openMenu(){

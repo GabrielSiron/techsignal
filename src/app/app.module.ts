@@ -9,6 +9,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { CadastroPage } from '../pages/cadastro/cadastro';
 import { CursoPage } from '../pages/curso/curso';
+import { MeuscursosPage } from '../pages/meuscursos/meuscursos';
+import { SobrePage } from '../pages/sobre/sobre';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { CursoPage } from '../pages/curso/curso';
     CadastroPage,
     HomePage,
     CursoPage,
+    MeuscursosPage,
+    SobrePage,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +35,8 @@ import { CursoPage } from '../pages/curso/curso';
     CadastroPage,
     HomePage,
     CursoPage,
+    MeuscursosPage,
+    SobrePage,
   ],
   providers: [
     StatusBar,
@@ -38,4 +44,5 @@ import { CursoPage } from '../pages/curso/curso';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
+
 export class AppModule {}
