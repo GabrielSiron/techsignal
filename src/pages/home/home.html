@@ -14,42 +14,40 @@
   }
 </style> 
 <ion-header>
-  <ion-navbar hideBackButton>
-    <button (click)="openMenu()">
+  <ion-navbar color="primary" hideBackButton>
+    <button style="background-color:#303F9F;" (click)="openMenu()">
       <ion-icon name="menu" md="md-menu" style="zoom:2.0; display: inline-block;"></ion-icon>
     </button>
-    <ion-title style="text-align: center; display: inline-block;"> Página Inicial </ion-title>
+    <ion-title> Página Inicial </ion-title>
   </ion-navbar>
 </ion-header>
 <div style="overflow-y: scroll; height: 100%;">
-  <h1  style="padding-top: 40px;">Seus Cursos</h1>
+  <h1  style="padding-top: 40px; padding-left: 20px;">Seus Cursos</h1>
 <div class="scrollmenu">
   <a (click)="cad()">
     <ion-card class="card">
-      <ion-card-header>
         <img class="card" src="../../assets/imgs/mecanica.jpg"><img>
-        <ion-card-title>Mecânica Industrial</ion-card-title>
-      </ion-card-header>
       <div class="line"></div>
       <ion-card-content style="white-space: normal;">
+        <ion-card-title>Mecânica Industrial</ion-card-title>
+        <p>
         Neste curso, você encontrará os materiais de apoio para o
         aprendizado do curso de Mecânica Industrial pelo Instituto Federal
-        da Bahia.
+        da Bahia.</p>
         <ion-badge item-end>Gratuito</ion-badge>
       </ion-card-content>
     </ion-card>
   </a>
   <a (click)="cad()">
     <ion-card class="card">
-      <ion-card-header>
         <img class="card" src="../../assets/imgs/automacao.jpeg"><img>
-        <ion-card-title>Automação Industrial</ion-card-title>
-      </ion-card-header>
       <div class="line"></div>
       <ion-card-content style="white-space: normal;">
+        <ion-card-title>Automação Industrial</ion-card-title>
+        <p>
         Neste curso, você encontrará os materiais de apoio para o
         aprendizado do curso de Automação Industrial pelo Instituto Federal
-        da Bahia.
+        da Bahia.</p>
         <div style="align-items: right; align-content: right;">
           <ion-badge item-end>Gratuito</ion-badge>
         </div>  
@@ -58,62 +56,58 @@
   </a>
   <a (click)="cad()">
     <ion-card class="card">
-      <ion-card-header>
         <img class="card" src="../../assets/imgs/quimica.jpeg"><img>
-        <ion-card-title>Química</ion-card-title>
-      </ion-card-header>
       <div class="line"></div>
       <ion-card-content style="white-space: normal;">
+        <ion-card-title>Química</ion-card-title>
+        <p>
         Neste curso, você encontrará os materiais de apoio para o
         aprendizado do curso de Química Industrial pelo Instituto Federal
-        da Bahia. 
+        da Bahia.</p>
         <ion-badge item-end>Gratuito</ion-badge>
       </ion-card-content>
     </ion-card>
   </a>
 </div>
-<h1>Cursos Técnicos</h1>
+<h1 style="padding-left: 20px;">Cursos Técnicos</h1>
 <div class="scrollmenu">
   <a (click)="cad()">
     <ion-card class="card">
-      <ion-card-header>
         <img class="card" src="../../assets/imgs/mecanica.jpg"><img>
-        <ion-card-title>Mecânica Industrial</ion-card-title>
-      </ion-card-header>
       <div class="line"></div>
       <ion-card-content style="white-space: normal;">
+        <ion-card-title>Mecânica Industrial</ion-card-title>
+        <p>
         Neste curso, você encontrará os materiais de apoio para o
         aprendizado do curso de Mecânica Industrial pelo Instituto Federal
-        da Bahia. 
+        da Bahia.</p>
         <ion-badge item-end color="dark">Premium</ion-badge>
       </ion-card-content>
     </ion-card>
   </a>
   <a (click)="cad()">
     <ion-card class="card">
-      <ion-card-header>
         <img class="card" src="../../assets/imgs/automacao.jpeg"><img>
-        <ion-card-title>Automação Industrial</ion-card-title>
-      </ion-card-header>
       <div class="line"></div>
       <ion-card-content style="white-space: normal;">
+        <ion-card-title>Automação Industrial</ion-card-title>
+        <p>
         Neste curso, você encontrará os materiais de apoio para o
         aprendizado do curso de Automação Industrial pelo Instituto Federal
-        da Bahia. Acesso Gratuito.
+        da Bahia. Acesso Gratuito.</p>
       </ion-card-content>
     </ion-card>
   </a>
   <a (click)="cad()">
     <ion-card class="card">
-      <ion-card-header>
         <img class="card" src="../../assets/imgs/quimica.jpeg"><img>
-        <ion-card-title>Química</ion-card-title>
-      </ion-card-header>
       <div class="line"></div>
       <ion-card-content style="white-space: normal;">
+        <ion-card-title>Química</ion-card-title>
+        <p>
         Neste curso, você encontrará os materiais de apoio para o
         aprendizado do curso de Química Industrial pelo Instituto Federal
-        da Bahia. Acesso Gratuito.
+        da Bahia. Acesso Gratuito.</p>
       </ion-card-content>
     </ion-card>
   </a>
