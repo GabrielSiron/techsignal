@@ -11,6 +11,8 @@ import { CadastroPage } from '../pages/cadastro/cadastro';
 import { CursoPage } from '../pages/curso/curso';
 import { MeuscursosPage } from '../pages/meuscursos/meuscursos';
 import { SobrePage } from '../pages/sobre/sobre';
+import { ContaPage } from '../pages/conta/conta';
+import { ChangePasswordPage } from '../pages/change-password/change-password';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { SobrePage } from '../pages/sobre/sobre';
     CursoPage,
     MeuscursosPage,
     SobrePage,
+    ContaPage,
+    ChangePasswordPage,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import { SobrePage } from '../pages/sobre/sobre';
     CursoPage,
     MeuscursosPage,
     SobrePage,
+    ContaPage,
+    ChangePasswordPage,
   ],
   providers: [
     StatusBar,

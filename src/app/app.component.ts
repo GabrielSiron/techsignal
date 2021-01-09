@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { MeuscursosPage } from '../pages/meuscursos/meuscursos';
 import { SobrePage } from '../pages/sobre/sobre';
-
+import { ContaPage } from '../pages/conta/conta';
 @Component({
   templateUrl: 'app.html'
 })
@@ -29,7 +29,8 @@ export class MyApp {
     this.pages = [
       { title: 'Tech Signal', component: SobrePage},
       { title: 'Home', component: HomePage}, 
-      { title: 'Meus Cursos', component: MeuscursosPage}
+      { title: 'Meus Cursos', component: MeuscursosPage},
+      { title: 'Minha Conta', component: ContaPage}
     ];
   }
 
