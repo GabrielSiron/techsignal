@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { Slides } from 'ionic-angular';
 
 /**
  * Generated class for the SobrePage page.
@@ -14,10 +15,20 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
   templateUrl: 'sobre.html',
 })
 export class SobrePage {
-
+  src: string;
   constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
   }
 
+  currentSlide(n) {
+    if(n == 1){
+      this.src = "../../assets/imgs/mecanica.jpg";
+    } else if(n == 2){
+      this.src = "../../assets/imgs/automacao.jpeg";
+    } else if(n == 3){
+      this.src = "../../assets/imgs/mecanica.jpg"
+    }
+
+  }
   openMenu(){
     this.menuCtrl.open();
   }
