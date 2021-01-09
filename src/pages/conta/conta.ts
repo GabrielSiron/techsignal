@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { isBreakStatement } from 'typescript';
 import { ChangePasswordPage } from '../change-password/change-password';
 /**
@@ -18,7 +18,7 @@ export class ContaPage {
   email: string;
   nome: string;
   newemail: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {
     this.email = "gabrielsiron.menezes@gmail.com";
     this.nome = "Gabriel Siron";
     this.newemail = "";
@@ -34,6 +34,9 @@ export class ContaPage {
         this.newemail += "*";
       }
     }
+  }
+  openMenu(){
+    this.menuCtrl.open();
   }
   changePassword(){
     this.navCtrl.push(ChangePasswordPage);
