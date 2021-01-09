@@ -1,19 +1,22 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="primary">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
+    <!-- <div padding>
+    <ion-icon class="user-avatar" color="dark" large name="contact" item-left></ion-icon>
+    </div> -->
   </ion-header>
   <ion-content>
     <ion-list>
       <button ion-item (click)="openPage(1)">
-        Home
+        <ion-icon color="secondary-text" name="home" item-left></ion-icon> Home
       </button>
-      <button ion-item (click)="openPage(2)" >
-        Meus Cursos
+      <button ion-item (click)="openPage(2)">
+        <ion-icon color="secondary-text" name="bookmarks" item-left></ion-icon> Meus Cursos
       </button>
       <button ion-item (click)="openPage(0)">
-        Sobre a Tech!
+        <ion-icon color="secondary-text" name="information-circle" item-left></ion-icon> Sobre a Tech!
       </button>
     </ion-list>
   </ion-content>
